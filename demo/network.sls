@@ -2,14 +2,6 @@
 
 
 
-
-#"Setup DNS":
-#  win_dns_client.dns_exists:
-#    - replace: 
-#    - interface: 'Ethernet'
-#    - servers:
-#      - {{ pillar['ad']['dns'] }}
-
 "Reboot after name change":
   module.run:
     - name: system.reboot
