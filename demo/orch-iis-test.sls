@@ -14,13 +14,7 @@ wait_for_reboots:
       - demo-iis1
       - demo-iis2
 
-"Send IIS message to slack":
-  salt.state:
-    - tgt: 'vm-master'
-    - sls:
-      - slack.blast
-    - pillar:
-        mymessage: "New IIS Servers have been deployed"
+
 
 "Add Servers to AD":
   salt.state:
