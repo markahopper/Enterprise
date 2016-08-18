@@ -11,15 +11,15 @@ include:
 {% set site = "WebApp1" %}
 {% set sitefiles = "c:\websites" %}
 {% set stage = "c:\stage" %}
-{% set cert = "efh.saltstack.lab.pfx" %}
-{% set certhash = "FAD3E19051193FE998C802105E9D3014181BCD3B" %}
+{% set cert = "demo.saltstack.lab.pfx" %}
+{% set certhash = "87F7C161C17F4123F9AF4715824FAAAFCD1FABEF" %}
 {% set location = "LocalMachine" %}
 {% set datastore = "WebHosting" %}
 
 "Deploy certs to IIS machines":
   file.managed:
     - name: '{{ stage }}\{{ cert }}'
-    - source: salt://files/{{ cert }}
+    - source: salt://demo/files/{{ cert }}
     - makedirs: True
 
 "Deploy IIS SelfSigned Cert":
