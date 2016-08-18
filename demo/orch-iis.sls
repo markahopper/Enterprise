@@ -7,20 +7,20 @@
 
 # Deploy 2 new IIS instances
 
-"Deploy IIS New Server":
-  salt.runner:
-    - name: cloud.profile
-    - prof: demo-iis
-    - instances:
-      - demo-iis1
-      - demo-iis2
+#"Deploy IIS New Server":
+#  salt.runner:
+#    - name: cloud.profile
+#    - prof: demo-iis
+#    - instances:
+#      - demo-iis1
+#      - demo-iis2
 
-"Put short pause in for web system to catch up":
-  salt.function:
-    - tgt: 'saltmaster'
-    - name: test.sleep
-    - kwarg:
-        length: 30
+#"Put short pause in for web system to catch up":
+#  salt.function:
+#    - tgt: 'saltmaster'
+#    - name: test.sleep
+#    - kwarg:
+#        length: 30
 
 "Deploy initial setup states":
   salt.state:
