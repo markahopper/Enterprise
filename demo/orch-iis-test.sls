@@ -16,7 +16,7 @@ wait_for_reboots:
 
 "Send IIS message to slack":
   salt.state:
-    - tgt: 'saltmaster'
+    - tgt: 'vm-master'
     - sls:
       - slack.blast
     - pillar:
