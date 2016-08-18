@@ -37,13 +37,13 @@ wait_for_reboots:
       - demo-iis1
       - demo-iis2
 
-"Send IIS message to slack":
-  salt.state:
-    - tgt: 'saltmaster'
-    - sls:
-      - slack.blast
-    - pillar:
-        mymessage: "New IIS Servers have been deployed"
+#"Send IIS message to slack":
+#  salt.state:
+#    - tgt: 'saltmaster'
+#    - sls:
+#      - slack.blast
+#    - pillar:
+#        mymessage: "New IIS Servers have been deployed"
 
 "Add Servers to AD":
   salt.state:
@@ -72,13 +72,13 @@ wait_for_reboots:
     - tgt_type: list
     - highstate: True
 
-"Send web server highstate message to slack":
-  salt.state:
-    - tgt: 'saltmaster'
-    - sls:
-      - slack.blast
-    - pillar:
-        mymessage: "Highstate for new web servers has been executed"
+#"Send web server highstate message to slack":
+#  salt.state:
+#    - tgt: 'saltmaster'
+#    - sls:
+#      - slack.blast
+#    - pillar:
+#        mymessage: "Highstate for new web servers has been executed"
 
 
 
