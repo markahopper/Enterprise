@@ -61,7 +61,7 @@ wait_for_reboots:
 
 "Put short pause in for web system to catch up after AD boot":
   salt.function:
-    - tgt: 'saltmaster'
+    - tgt: 'vm-master'
     - name: test.sleep
     - kwarg:
         length: 30
