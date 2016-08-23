@@ -11,7 +11,7 @@
 "WebApp1 stage files":
   file.recurse:
     - name: '{{ sitefiles }}\'
-    - source: salt://web/pretty
+    - source: salt://iis/pretty
     - template: jinja
     - include_empty: True
     - defaults:
